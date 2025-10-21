@@ -1,0 +1,54 @@
+# Rangkuman: Week 1 - Version Control (Git)
+
+## 1. Konsep Dasar Version Control
+* **Version Control (VCS):** Sistem yang mengelola dan melacak perubahan terhadap kode atau dokumen. Ini memungkinkan individu atau tim untuk kembali ke versi sebelumnya jika diperlukan.
+* **Git:** Salah satu *Version Control System* (VCS) terpopuler. Sangat berguna untuk kolaborasi karena kemampuannya mengelola berbagai *branch* (cabang) kode secara paralel.
+* **GitHub:** Platform berbasis web yang menggunakan Git sebagai intinya. GitHub memfasilitasi kolaborasi tim dengan menyediakan fitur seperti *issue tracking*, *project board*, dan *code review*.
+* **Platform Lain:**
+    * **GitLab:** Dikenal dengan fitur CI/CD bawaan.
+    * **Bitbucket:** Terintegrasi baik dengan produk Atlassian (seperti Jira).
+
+---
+
+## 2. Fitur Utama dan Alur Kerja Git
+
+### Fitur Penting Git
+* **Commit:** Menyimpan perubahan (snapshot) kode pada waktu tertentu.
+* **Branching:** Membuat cabang kode baru untuk mengembangkan fitur tanpa mengganggu kode utama.
+* **Merging:** Menggabungkan perubahan dari satu *branch* ke *branch* lainnya.
+* **Revert:** Mengembalikan atau membatalkan perubahan yang telah dibuat.
+* **Stash:** Menyimpan perubahan sementara tanpa perlu melakukan `commit`.
+
+### Alur Kerja (Workflow)
+* **Centralized Workflow:** Semua developer bekerja pada satu *branch* utama.
+* **Feature Branch Workflow:** Setiap fitur baru dikembangkan di *branch*-nya sendiri untuk mengurangi risiko konflik.
+* **Gitflow:** Alur kerja yang lebih terstruktur dengan *branch* khusus untuk pengembangan (`develop`), pengujian, dan produksi (`main`/`master`).
+
+---
+
+## 3. Perintah Dasar dan Kolaborasi
+
+### Perintah Dasar Git
+* `git init`: Menginisialisasi repositori baru.
+* `git status`: Memeriksa status perubahan file.
+* `git add`: Menambahkan perubahan ke *staging area* (area persiapan sebelum di-*commit*).
+* `git commit`: Menyimpan perubahan yang ada di *staging area* sebagai satu versi.
+* `git push`: Mengunggah *commit* ke repositori jarak jauh (misalnya GitHub).
+* `git pull`: Mengambil pembaruan dari repositori jarak jauh.
+* `git reset`: Mengembalikan kondisi ke *commit* tertentu.
+
+### Resolusi Konflik
+Konflik terjadi ketika dua orang atau lebih mengubah baris kode yang sama. Git akan menandai konflik ini, dan pengguna harus menyelesaikannya secara manual dengan memilih perubahan yang ingin disimpan.
+
+### Kolaborasi di GitHub
+* **Fork:** Menyalin repositori milik pengguna lain ke akun kita sendiri.
+* **Pull Request (PR):** Mengajukan permintaan agar perubahan dari *fork* kita digabungkan (*merge*) ke repositori asal.
+* **Code Review:** Proses meninjau kode di dalam *Pull Request* untuk memastikan kualitas sebelum digabungkan.
+
+---
+
+## 4. Best Practice untuk penggunaan git
+1.  Lakukan `commit` secara teratur dengan pesan yang jelas dan spesifik.
+2.  Hindari melakukan `commit` langsung ke *branch* utama (seperti `main` atau `master`).
+3.  Selalu lakukan pembaruan (`pull`) pada *branch* Anda sebelum melakukan *merge* untuk menghindari konflik.
+4.  Gunakan file `.gitignore` untuk mengabaikan file atau folder yang tidak perlu dilacak (seperti file konfigurasi lokal, *dependencies*, atau *build files*).
